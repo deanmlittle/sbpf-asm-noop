@@ -11,7 +11,7 @@ The existing [noop program](https://github.com/solana-labs/solana-program-librar
 There exists a better Rust version of an actual `noop` program by [@caveymanloverboy](https://github.com/cavemanloverboy) which you can [check out here](https://github.com/cavemanloverboy/nanotoken/blob/main/noop/src/lib.rs). While this is optimal from a CU standpoint, unfortunately, when it comes to build size, the rust compiler leaves a lot to be desired. We can do better! ;)
 
 ### Assembly  to the rescue!
-Presenting the `sbpf-asm-noop` program. Written in assembly with a custom linker, the sbpf-asm-noop program costs just 1CU, but weighs in at a *tiny* 336 bytes. It's so small you could deploy 3 of them in a single transaction! This program serves as an example of ___extreme___ sbpf binary optimization. Here's just a handle of things that have been optimized to make this program do absolutely nothing as efficiently as possible:
+Presenting the `sbpf-asm-noop` program. Written in assembly with a custom linker, the sbpf-asm-noop program costs just 1CU, but weighs in at a *tiny* 336 bytes. It's so small you could deploy 3 of them in a single transaction! This program serves as an example of ___extreme___ sbpf binary optimization. Here's just a handful of things that have been optimized to make this program do absolutely nothing as efficiently as possible:
 
 - removed all comments, hashes and compiler messages
 - removed all dynamic data
