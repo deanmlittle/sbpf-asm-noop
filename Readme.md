@@ -20,7 +20,7 @@ Presenting the `sbpf-asm-noop` program. Written in assembly with a custom linker
 - renamed .shstrtab to .s to save 7 bytes, as the constraint in rbpf is on the index of the section header string table, not the name of it.
 - probably a few other things I forgot to mention
 
-By doing all of the above, we are able to achieve an optimal sbpf binary size for our noop program. It is my hope that this serves as an extreme example of how much low hanging fruit there is optimizing other widely-used programs in the future to promote the adoption of more resource-efficient programs, libraries and tooling.
+By doing all of the above, we are able to achieve an optimal sbpf binary size for our noop program. It is my hope that this serves as an extreme example of how much low hanging fruit there is in optimizing on-chain programs, that we can optimize other widely-used programs, and that we can promote the adoption of more resource-efficient programs, libraries and tooling.
 
 ### Rough benchmarks
 | Version             | Size (*approx) |
