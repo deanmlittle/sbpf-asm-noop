@@ -1,5 +1,5 @@
 # Solana eBPF ASM Noop
-An sbpf assembly program that has been heavily optimized to do nothing whatsover. It represents the current optimal implementation in regards to both computational and storage complexity as allowed by [solana_rbpf](https://github.com/solana-labs/rbpf). A more storage-optimal version may be possible with a VM library that places fewer seemingly arbitrary constraints on program section headers.
+An sbpf assembly program that has been heavily optimized to do nothing whatsover in just ___336 bytes___. It represents the current optimal implementation in regards to both computational and storage complexity as allowed by [solana_rbpf](https://github.com/solana-labs/rbpf). A more storage-optimal version may be possible with a VM library that places fewer seemingly arbitrary constraints on program section headers.
 
 ### Introduction
 A noop program is useful for outputting CPI events and logging arbitrary data on chain. It also happens to provide us with the simplest possible example of a program - even simpler than [hello world](https://github.com/deanmlittle/hello-solana-asm), because it is designed to do nothing.
