@@ -1,0 +1,3 @@
+.globl e
+e:
+    exit

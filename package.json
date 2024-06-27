@@ -1,0 +1,24 @@
+{
+  "name": "hello-solana-asm",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Dean 利迪恩 <@deanmlittle>",
+  "license": "MIT",
+  "scripts": {
+    "build": "make clean && make",
+    "deploy": "solana program deploy ./deploy/noop.so --program-id ./deploy/noop_keypair.json -u localhost",
+    "test": "export SIGNER=$(cat ~/.config/solana/mainnet.json) && mocha --import=tsx tests/test.ts",
+    "e2e": "yarn build && yarn deploy && yarn test",
+    "close": "solana program close --buffers --authority ./deploy/noop_keypair.json -u localhost"
+  },
+  "dependencies": {
+    "@solana/web3.js": "^1.91.8"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.16",
+    "@types/mocha": "^10.0.6",
+    "chai": "^5.1.1",
+    "mocha": "^10.4.0",
+    "tsx": "^4.11.0"
+  }
+}
